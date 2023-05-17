@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title>자기 소개</title>
+<meta charset="utf-8">
+<script>
+  function nightDayhandler(self){
+    var target = document.querySelector('body');
+    if(self.value === 'night'){
+      target.style.backgroundColor ='black';
+      target.style.color ='white';
+      self.value = 'day';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'powderblue';
+          i = i + 1
+        }
+
+    }else
+    {  target.style.backgroundColor = 'white';
+      target.style.color ='black';
+      self.value = 'night';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'blue';
+          i = i + 1
+        }
+}}
+</script>
+</head>
+
+<body>
+  <h1><a href="web2.html">내가 좋아하는 것들</a></h1>
+
+  <input type="button" value="night" onclick="nightDayhandler(this);">
+
+<ol>
+  <li><a href="1-1.html">Music</a></li>
+  <li><a href="1-2.html">Food</a></li>
+</ol>
+<h2>나는 누구일까?</h2>
+<p>
+    나는 서울에서 태어나 지금은 인천에서 웹기초를 공부하고 있는 박수정이라고 한다.<br>
+    이 페이지는 내가 가장 좋아하는 것들을 소개하는 문서다.
+
+</p>
+</body>
+</html>
